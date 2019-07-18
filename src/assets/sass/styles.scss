@@ -2,4 +2,23 @@
 // STYLES
 // ------------------------------------------------------------------
 
-// ...
+// main 
+
+@import './fonts.scss';
+@import './variables.scss';
+@import './breakpoints';
+@import './mixins.scss';
+@import './shared.scss';
+
+// header
+
+@import './header.scss';
+
+// screens
+
+@import './screen-one.scss';
+@import './screen-two.scss';
+@import './scroll-screen.scss';
+@import './toggle-screen.scss';
+@import './black-screen.scss';
+@import './end-screen.scss';

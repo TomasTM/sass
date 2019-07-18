@@ -1,0 +1,40 @@
+.screen-one {
+	position: relative;
+	min-height: 100vh;
+	overflow: hidden;
+	@include respond-to('small') {
+		padding: 50px 10px 0 10px;
+	}
+	.squares {
+		position: absolute;
+		right: 250px;
+		top: -50px;
+		@include respond-to('small') {
+			top: 400px;
+			right: 200px;
+		}
+		.square-orange { @include square($orangeGradient, -25deg)}
+		.square-blue {@include square($purpleGradient, -45deg)}
+	}
+	.screen-one-content {
+		@include flex;
+		position: relative;
+		z-index: 2;
+		align-items: center;
+		margin-top: 40px; 
+		h2 {
+			margin: 0 0 20px 0;
+		}
+		.comp {
+			p {
+				text-transform: uppercase;
+				font-weight: 400;
+				font-size: 12px;
+				color: $mid-gray;
+			}
+			.row {
+				opacity: .3;
+			}
+		}
+	}
+}

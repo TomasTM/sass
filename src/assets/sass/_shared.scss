@@ -1,0 +1,104 @@
+// main
+
+html, body {
+	margin: 0px; 
+	width: 100%; 
+	height: 100%; 
+	font-family: $lato;
+	@include respond-to('small') {
+		br { 
+       display: none;   // hide the BR tag for small screens - best way to keep with designs and not having strange breaks in mobile
+    }
+	}
+	img {max-width: 100%;}
+} 
+
+// sctructure 
+
+.container {
+	max-width: $container-max; margin: 0 auto;
+}
+.row { @include flex; justify-content: space-between }
+
+// flex-sizes 
+
+.md-3 {
+	flex-grow: 0;
+	max-width: 33.333333%;
+	flex-basis: 33.333333%;
+
+	@include respond-to('small') {
+    flex-grow: 0;
+		max-width: 100%;
+		flex-basis: 100%;
+  }
+}
+
+.md-2 {
+	flex-grow: 0;
+	max-width: 50%;
+	flex-basis: 50%;
+
+	&.space {
+		padding: 0px 40px 0 0 ;
+    box-sizing: border-box;
+	}
+
+	@include respond-to('small') {
+    flex-grow: 0;
+		max-width: 100%;
+		flex-basis: 100%;
+		&.space {
+			padding: 0 10px;
+			box-sizing: border-box;
+		}
+  }
+}
+
+.md-1 {
+	flex-grow: 0;
+	max-width: 100%;
+	flex-basis: 100%;
+}
+.inline {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+// text
+
+.align-left {text-align: left}
+.align-center { text-align: center; }
+.align-right {text-align: right}
+.small-title { @include fontLight; }
+.title { @include fontTitle; }
+.text { @include fontRegular; }
+
+// links
+
+.no-style-link-light {
+	@include no-style-link(300)
+}
+.no-style-link-bold {
+	@include no-style-link(700)
+}
+
+// Buttons
+
+.button {
+	background-color: $blue;
+	padding: 10px 20px;
+	border-radius: 4px;
+	color: $white; 
+	text-decoration: none;
+}
+
+// target navigtion
+
+.page, :target ~ .default {
+	display: none;
+}
+
+.default, :target {
+	display: block;
+}

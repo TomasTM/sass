@@ -1,0 +1,76 @@
+
+
+
+// FONTS
+
+@mixin fontLight {
+	font-family: $lato;
+	font-weight: 300;
+	font-size: 16px; 
+}
+@mixin fontRegular {
+	font-family: $lato;
+	font-weight: 400;
+	font-size: 20px; 
+	color: $mid-gray;
+	line-height: 28px;
+}
+@mixin fontBold {
+	font-family: $lato;
+	font-weight: 700;
+	font-size: 26px;
+}
+@mixin fontTitle {
+	font-family: $titleFont;
+	font-weight: 700;
+	letter-spacing: 2px;
+	font-size: 40px;
+	margin: 20px 0px;
+}
+
+//GRID
+
+@mixin flex {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+// LINKS
+
+@mixin no-style-link($weight) {
+	color: $black;
+	text-decoration: none;
+	font-weight: $weight
+}
+
+// SQUARE
+
+@mixin square($gradient,$rotate) {
+	border-radius: 28px;
+	width: 500px;
+	height: 500px;
+	position: absolute;
+	opacity: .9;
+	background-image: $gradient;
+	transform: rotate($rotate);
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+// REMOVE SCROLL
+
+@mixin no-scroll-bar {
+	overflow: scroll;
+	-ms-overflow-style: none; // hide scrollbar in IE 10+
+	scrollbar-width: none; // hide scrollbar in firefox
+	&::-webkit-scrollbar { display: none !important } // hide scrollbar in chrome an safari
+}
+
+// BG IMG
+
+@mixin bg($url) {
+	background-image: url($url);
+	background-position: left center;
+	background-size: cover;
+	background-repeat: no-repeat;	
+}

@@ -1,0 +1,44 @@
+// header stye
+.header-fixed{
+	position:fixed;
+	border: 1px solid $light-gray;
+	width: 100%;
+	z-index: 100;
+	background-color: $white;
+	header {
+		@include flex;
+		padding: 10px;
+		align-items: center;
+		@include respond-to('small') {
+			.md-3 {
+				flex-grow: 0;
+				max-width: 50%;
+				flex-basis: 50%;
+				&.align-center {
+					display: none;
+				}
+			}
+		}
+		.logo {
+			
+			margin: 0;
+			@include fontBold;
+			span {
+				color: $blue;
+			}
+		}
+		ul {
+			margin:0; 
+			padding: 0;
+			display: flex;
+			justify-content: space-between;
+			
+			li {
+				list-style: none;
+				flex-grow: 0;
+				max-width: 33.333333%;
+				flex-basis: 33.333333%;
+			}
+		}
+	}
+}

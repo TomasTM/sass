@@ -1,0 +1,35 @@
+// BREAKPOINTS
+
+$breakpoints: (
+  'small':  767px,
+  'medium': 992px,
+  'large':  1200px
+) !default;
+
+
+// FONTS
+
+$lato: 'Lato', sans-serif;
+$titleFont: 'Alfa Slab One', cursive;
+
+// COLORS
+
+$white: #ffffff;
+$black: #000000;
+$light-gray: #f3f3f3;
+$mid-gray: #7e7a7e;
+$lightBlue:#8158e7; 
+$blue:#5411FB; 
+$orange: #EB943C;
+$darkOrange: #d88736;
+
+// GRADIENTS 
+
+$purpleGradient: linear-gradient(135deg,  #8043db 0%,#3d3dd9 100%);
+$orangeGradient: linear-gradient(135deg, #f4a540 0%,#ee4f34 100%);
+$blueGradient: linear-gradient(135deg, #4fc6f9 0%,#3446f4 100%);
+
+// WIDTHS
+
+$container-max: 1200px;
+

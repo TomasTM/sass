@@ -1,0 +1,67 @@
+.toggle-screen {
+	position: relative;
+	min-height: 100vh;
+	.row {
+		align-items: center;
+		.md-2 {
+			&:first-child {
+				padding-right: 100px;
+				@include respond-to('small'){
+					padding: 0 10px;
+				}
+			}
+		}
+		
+		#first-screen { 
+			.bg {
+				@include bg('../images/mockup-app-desktop.png');
+				img {
+					position: relative;
+					bottom: -140px;
+					left: -120px;
+				}
+			}
+			@include respond-to('small'){
+				.bg {
+					background: none;
+					text-align: center;
+					img {
+						position: static;
+					}
+				}
+			}
+		}
+
+		#second-screen { 
+			.bg {
+				@include bg('../images/cover-westworld.png');
+				img {
+					position: relative;
+					bottom: -140px;
+					left: -120px;
+				}
+			}
+		}
+
+		#third-screen { 
+			.bg {
+				@include bg('../images/cover-flash.png');
+				img {
+					position: relative;
+					bottom: -140px;
+					left: -120px;
+				}
+			}
+		}
+		
+		ul {
+			margin:0; 
+			padding: 0;
+			li {
+				list-style: none;
+				margin: 20px 0px;
+			}
+		}
+	}
+}
+
